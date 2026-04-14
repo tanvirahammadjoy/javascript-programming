@@ -1,18 +1,4 @@
-import readline from "node:readline/promises";
-import { stdin as input, stdout as output } from "node:process";
+import { readFile } from "node:fs/promises";
 
-const rl = readline.createInterface({ input, output });
-
-const arr = [];
-
-async function askForNumber() {
-  const answer = await rl.question("What do you want to add to your list: ");
-  arr.push(answer);
-}
-
-for (let i = 0; i < 3; i++) {
-  await askForNumber();
-}
-
-rl.close();
-console.log("Final array:", arr);
+const data = await readFile("input.txt", "utf-8");
+console.log(data);
