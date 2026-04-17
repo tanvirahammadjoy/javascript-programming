@@ -81,11 +81,13 @@ li {
   border-radius: 5px;
   margin-bottom: 8px;
   border: 1px solid #ddd;
+  cursor: pointer;
 }
 
 li.completed span {
   text-decoration: line-through;
   color: #999;
+  cursor: pointer;
 }
 
 .delete-btn {
@@ -117,6 +119,8 @@ li.completed span {
   color: #555;
   padding: 5px 0;
   border-bottom: 1px dotted #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .undo-btn {
@@ -133,4 +137,9 @@ li.completed span {
 
 .undo-btn:hover {
   background-color: #1976d2;
+}
+
+.undo-btn:disabled {
+  background-color: #4d4d4d;
+  cursor: not-allowed;
 }
