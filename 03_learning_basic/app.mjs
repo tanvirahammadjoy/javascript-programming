@@ -24,7 +24,7 @@ const server = createServer((req, res) => {
       });
 
       worker.on("error", (err) => {
-        console.error("Worker crashed:", err); // 👈 ADD THIS
+        console.error("Worker crashed:", err); // 👈 Error log
         res.writeHead(500);
         res.end("Worker error occurred");
       });
